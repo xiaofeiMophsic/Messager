@@ -3,11 +3,10 @@ package com.example.paozi.messager;
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
+import android.util.Log;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import static org.junit.Assert.*;
 
 /**
  * Instrumentation test, which will execute on an Android device.
@@ -20,7 +19,8 @@ public class ExampleInstrumentedTest {
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
-
-        assertEquals("com.example.paozi.messager", appContext.getPackageName());
+        Solo solo = new Solo();
+        solo.setId("com.android.test");
+        Log.d("TAG", solo.getId());
     }
 }
